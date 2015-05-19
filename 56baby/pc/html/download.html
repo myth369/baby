@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>56宝宝</title>
+<link href="../css/main.css" type="text/css" rel="stylesheet" />
+<link href="../css/download.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+	// 如果是移动设备跳转到移动版
+	(function(){
+		try{
+			var e = navigator.userAgent,
+				t = e.match(/iPhone|iPod/i);
+			location.href.indexOf("#pc")===-1
+			&&(t || e.indexOf("Android")>-1 || e.indexOf("IEMobile")>-1)
+			&&(location.href="../../h5/html/download-mobile.html")
+		}catch(n){}
+	})();
+
+</script>
+<script type="text/javascript" src="../js/zepto.js"></script>
+</head>
+
+<body class="bodyDownload">
+<!-- Start:topDown -->
+<div class="topDown">
+	<div class="modBg">
+		<div class="modIn cf">
+			<img src="../css/images/logo-white.png" width="102" height="34" class="vam l" alt="56宝宝" />
+			<!-- <div class="topr r"><a href="" class="dbtn-web fs14">网页版</a><span class="dbtn-fenge fs14">|</span><a href="" class="dbtn-login">登录</a></div> -->
+		</div>
+	</div>
+</div>
+<!-- End:topDown -->
+
+<div class="dpoint"><span class="dp dp-on"></span><span class="dp"></span><span class="dp"></span><span class="dp"></span></div>
+
+<!-- Start:mod -->
+<div class="modD modDA">
+	<div class="modBg">
+		<div class="modIn cf">
+			<div class="dbox">
+				<span class="dbtn-android">Android版免费下载</span>
+				<span class="dbtn-ios">IOS版敬请期待</span>
+				<div class="tac">
+					<img src="../css/images/download/erwm.png" width="150" height="150" alt="二维码" />
+					<p class="erwm-text">扫描二维码直接下载</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End:mod -->
+
+<!-- Start:mod -->
+<div class="modD modDB">
+	<div class="modBg">
+		<div class="modIn cf">
+			<div class="dbox">
+				<h3 class="dbox-tit">高清存储</h3>
+				<p class="dbox-text">56宝宝是一款记录孩子点滴成长故事，永久保存孩子精彩瞬间的应用，专为一家人订制</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End:mod -->
+
+<!-- Start:mod -->
+<div class="modD modDC">
+	<div class="modIn cf">
+		<div class="dbox">
+			<h3 class="dbox-tit">家庭共享</h3>
+			<p class="dbox-text">56宝宝支持视频、照片、身高等多种形式轻松记录宝宝生活点滴，自动归集整理成时间轴，方便您随时查看精彩瞬间！</p>
+		</div>
+	</div>
+</div>
+<!-- End:mod -->
+
+<!-- Start:mod -->
+<div class="modD modDD">
+	<div class="modIn cf">
+		<div class="dbox">
+			<h3 class="dbox-tit">安全隐私</h3>
+			<p class="dbox-text">只有通过您允许的用户才能访问宝宝的个人成长记录，保护宝宝的信息安全私密！所有内容不限量上传，为您提供永久免费的家庭云存储空间！</p>
+		</div>
+	</div>
+</div>
+<!-- End:mod -->
+
+<!-- Start:mod -->
+<!-- <div class="modD modDE">
+	<div class="modIn rel cf">
+		<dl class="dtips news l">
+			<dt>最新消息</dt>
+			<dd>1. 播放器功能优化。</dd>
+			<dd>2. 优化播放速度，播放更加流畅。</dd>
+			<dd>3. 新增中控单击展开详情页。</dd>
+			<dd>4. 优化中控浮窗的展现速度，速度更快。</dd>
+			<dd>5. 新增中控单击展开详情页。</dd>
+		</dl>
+		
+		<dl class="dtips contact l">
+			<dt>联系我们</dt>
+			<dd>邮箱：123455@sohu-inc.com</dd>
+			<dd>QQ:123444</dd>
+		</dl>
+		
+		<div class="erwm tac">
+			<img src="../css/images/download/erwm.png" width="150" height="150" alt="二维码" />
+			<p class="erwm-text">扫一扫，关注微信公众号</p>
+		</div>
+	</div>
+</div> -->
+<!-- End:mod -->
+
+<div class="footer" style="margin-top:0;">
+	Copyright &copy;2015 56.com 版权所有
+</div>
+<script type="text/javascript">
+	$.ajax({
+	    type: 'GET',
+	    url: 'http://baby.56.com/app/n/version/getleast.do',
+	    dataType : 'jsonp',
+	    jsonpCallback: 'getleast'
+	});
+
+	var downloadUrl = null;
+	window.getleast = function(obj){
+	    downloadUrl = obj.dlurl;
+	}
+
+    $(function() {
+        $('.dbtn-android').on('click', function() {
+            if(downloadUrl){
+            	location.href = downloadUrl;
+            }
+        });
+    });
+</script>
+</body>
+</html>

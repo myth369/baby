@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+<title>56宝宝</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css" /><!-- 常用css3动画 -->
+<link rel="stylesheet" type="text/css" href="../css/animations.css" /> <!-- 翻页用 -->
+<link rel="stylesheet" type="text/css" href="../css/animation.css" /> <!-- 翻页用 -->
+<link href="../css/main.css" type="text/css" rel="stylesheet" />
+<style>
+    html, body {
+    height: 100%;
+    }
+
+    body {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .pt-page {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+
+    .pt-page-current{
+        display:block;
+        z-index: 9;
+    }
+    .pt-page-ontop {
+        z-index: 9;
+    }
+</style>
+<!-- <script type="text/javascript" src="../js/prefixfree.min.js"></script> -->
+<script type="text/javascript" src="../js/zepto.js"></script>
+<script type="text/javascript" src="../js/touch.js"></script>
+<script type="text/javascript" src="../js/modernizr.custom.js"></script>
+<script type="text/javascript" src="../js/transation.js"></script>
+<script type="text/javascript" src="../js/tool.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <!-- Start:mod -->
+        <div class="pt-page modD modDA">
+            <img src="../css/images/download/arrow-down.png" class="arrow-down" />
+        	<img src="../css/images/download/bg-1.jpg" class="w100b"  />
+        	<button class="dbtn-down">立即下载</button>
+        </div>
+        <!-- End:mod -->
+
+        <!-- Start:mod -->
+        <div class="pt-page modD modDB">
+        	<img src="../css/images/download/bg-2.jpg" class="w100b"  />
+        	
+        </div>
+        <!-- End:mod -->
+
+        <!-- Start:mod -->
+        <div class="pt-page modD modDC">
+        	<img src="../css/images/download/bg-3.jpg" class="w100b"  />
+
+        </div>
+        <!-- End:mod -->
+
+        <!-- Start:mod -->
+        <div class="pt-page modD modDD">
+        	<img src="../css/images/download/bg-4.jpg" class="w100b"  />
+
+        </div>
+        <!-- End:mod -->
+
+        <!-- Start:mod -->
+        <div class="pt-page modD modDE">
+        	<img src="../css/images/download/bg-5.jpg" class="w100b"  />
+        	<button class="dbtn-down">立即下载</button>
+            <img src="../css/images/download/arrow-top.png" class="arrow-top" />
+        </div>
+        <!-- End:mod -->
+    </div>
+
+<div class="dpoint" style="z-index:9;">
+    <span class="dp dp-on"></span>
+    <span class="dp"></span>
+    <span class="dp"></span>
+    <span class="dp"></span>
+</div>
+
+<script type="text/javascript">
+    $(function(){
+        $(document).on('touchstart', function(e){
+            var node = $(e.target)
+            if(node[0].nodeName.toLowerCase() == 'a' || node.parents('a').length > 0){
+                
+            }else{
+                return false;
+            }
+        });
+        var pager = PageTransitions({
+            pageClass: '.pt-page',
+            nextEvent: 'swipeUp',
+            nextType: 3,
+            prevEvent: 'swipeDown',
+            prevType: 4,
+            fixBug: true,
+            prevCallback: function(cur){
+                $('.dpoint .dp').removeClass('dp-on').eq(cur).addClass('dp-on');
+            },
+            nextCallback: function(cur){
+                $('.dpoint .dp').removeClass('dp-on').eq(cur).addClass('dp-on');
+            }
+        });
+
+        $('.dbtn-down').on('tap', function() {
+            location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.baby56";
+        });
+    });
+</script>
+</body>
+</html>

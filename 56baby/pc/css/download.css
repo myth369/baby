@@ -1,0 +1,40 @@
+/* xhj 20150209 */
+body{min-width:1010px;}
+.modIn{width:980px;min-width:980px;margin:0 auto;color:#fff;}
+.modDA{background:url(images/download/bg-1.jpg) repeat-x;background-size:100% 700px;}
+.modDA .modBg{background:url(images/download/bg-1a.png) no-repeat center top;_background-images:url(images/download/bg-1a-png24.png);height:700px;}
+.modDA .dbox{width:265px;padding:270px 0 0 0;float:right;}
+.modDB{background:#5acbdb url(images/download/bg-2.jpg) no-repeat center top;height:600px;}
+.modDB .dbox{padding:165px 0 0 70px;}
+.modDC{background:#5ccea7 url(images/download/bg-3.jpg) no-repeat center top;height:600px;}
+.modDC .dbox{padding:160px 0 0 0;float:right;}
+.modDD{background:#fcbb66 url(images/download/bg-4b.png) repeat-x left bottom;}
+.modDD .modIn{background:url(images/download/bg-4a.gif) no-repeat right center;height:600px;}
+.modDD .dbox{padding:150px 0 0 60px;width:450px;}
+
+.dbtn-android,
+.dbtn-ios{display:block;width:265px;height:64px;text-align:center;line-height:64px;color:#fff;font-size:24px;border-radius:10px;cursor:pointer;}
+.dbtn-android{background:#f06844;margin:0 0 25px;}
+.dbtn-ios{background:#f8b445;margin:0 0 35px;}
+.dbtn-login{background:#f06844;display:inline-block;width:75px;height:35px;line-height:35px;text-align:center;color:#fff;font-size:16px;border-radius:5px;}
+.dbtn-login:hover{color:#fff;}
+.dbtn-fenge{color:#d4c19e;margin:0 10px;}
+.dbtn-web{color:#d4c19e;}
+.erwm{position:absolute;top:80px;right:20px;}
+.erwm-text{color:#3a3a3a;margin:12px 0 0;font-size:14px;}
+.erwm img{border:1px solid #ccc;}
+.dbox{width:380px;padding:160px 0 0;}
+.dbox-text{font-size:20px;line-height:1.75;color:#f9f9f9;letter-spacing:1px;text-align:justify;text-justify:inter-word;}
+.dbox-tit{font-size:46px;font-weight:normal;font-family:"simhei";margin:0 0 15px;text-align:center;}
+.dtips{color:#3a3a3a;width:440px;margin:70px 0 0;}
+.dtips dt{font-size:34px;margin:0 0 20px;}
+.dtips dd{font-size:20px;margin:0 0 5px;}
+.news{border-right:1px solid #e5e5e5;}
+.contact{margin-left:37px;}
+.contact dt{margin-bottom:40px;}
+.dpoint{top:850px;left:3%;position:fixed;_display:none;}
+.dp{background:url(images/download/point-normal.png) no-repeat;width:13px;height:13px;display:block;margin:0 0 10px;}
+.dp-on{background:url(images/download/point-on.png) no-repeat;}
+.bodyDownload{background:#fff;}
+.topDown{background:#fefefd;height:47px;padding:13px 0 0;}
+.footer{background:#f3f3f3;padding:25px 0 0;margin:70px 0 0;min-width:1010px;height:75px;text-align:center;font-size:14px;}

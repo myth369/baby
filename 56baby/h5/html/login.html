@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+<title>56宝宝</title>
+<link href="../css/main.css" type="text/css" rel="stylesheet" />
+<style type="text/css">
+    .input_error {font-size: 1.6rem;color: #e24123;}
+    .disable{background: #999;}
+    .hid {display: none;}
+    #phonecode_error{margin-top:-.8rem;}
+</style>
+<script type="text/javascript" src="../js/zepto.js"></script>
+<script type="text/javascript" src="../js/tool.js"></script>
+<script type="text/javascript" src="../js/login.js"></script>
+</head>
+
+<body>
+<!-- Start:login -->
+<div class="login">
+	<div class="login-row login-row1 cf">
+		<input type="tel" class="inp ra10 l" placeholder="请填写手机号码" id="phone" name="phone" maxlength="11" /><button id="getCodeBtn" class="login-yzm r ra10">获取验证码</button>
+    </div>
+    <div class="input_error hid login-row" id="phone_error"></div>
+	<div class="login-row login-row2 cf">
+		<input type="tel" class="inp ra10" placeholder="请填写您收到的验证码" id="phoneCode" name="phoneCode" maxlength="6" />
+	</div>
+    <div class="input_error hid login-row login-row2" id="phonecode_error"></div>
+	<button id="loginBtn" class="login-btn w100b disable">登录</button>
+</div>
+<!-- End:login -->
+</body>
+</html>
